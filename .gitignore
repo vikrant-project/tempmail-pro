@@ -1,0 +1,54 @@
+# Environment files with secrets
+.env
+*.env
+backend/.env
+frontend/.env
+!*.env.example
+
+# Keys and certificates
+*.pem
+*.key
+dkim/private.key
+dkim/*.key
+
+# Logs
+logs/
+*.log
+/var/log/
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Database backups with sensitive data
+backups/*.sql
+*.sql.gz
+backups/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts (we can keep dist for easier deployment)
+# frontend/dist/
+*.tar.gz
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Attachments storage (user data)
+attachments/
