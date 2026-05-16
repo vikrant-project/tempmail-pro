@@ -7,6 +7,7 @@ import {
   Play, Star, Paperclip, ExternalLink, CheckCircle, XCircle, ArrowRight, Lock
 } from "lucide-react"
 import "./App.css"
+import AnalyticsPageComponent from "./AnalyticsPage"
 
 const API_URL = import.meta.env.VITE_API_URL || "https://api.amitbrand.shop/api"
 
@@ -1489,7 +1490,8 @@ function WebhooksPage() {
 }
 
 // ============== ANALYTICS PAGE ==============
-function AnalyticsPage() {
+function AnalyticsPage() { const { api } = useAuth(); return <AnalyticsPageComponent api={api} />; }
+function AnalyticsPageOld() {
   const { api, usage } = useAuth()
   const { addToast } = useToast()
   const [analytics, setAnalytics] = useState(null)
